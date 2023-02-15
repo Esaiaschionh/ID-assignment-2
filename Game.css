@@ -43,7 +43,7 @@ p.Covidmap{
   font-family: 'Cormorant Garamond', serif;
 }
 
-body{
+:root{
   background-color: rgb(29, 26, 26);
 }
 
