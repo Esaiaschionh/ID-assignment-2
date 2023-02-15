@@ -1,0 +1,12 @@
+.hide{
+    background-color: grey;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+}
+
+.Na-text{
+    top: 10%;
+    left: 49%;
+}
