@@ -3,6 +3,15 @@
 <html>
     <head>
         <title>Covid Updates</title>
+        <script>
+        async function getData() {
+            const response = await fetch("https://api.covid19api.com/summary");
+            const data = await response.json();
+            document.getElementById("confirmed").innerHTML = data.Global.TotalConfirmed;
+            document.getElementById("deaths").innerHTML = data.Global.TotalDeaths;
+            document.getElementById("recovered").innerHTML = data.Global.TotalRecovered;
+        }
+        </script>
     </head>
     <div class="topnav" >
         <a class="active" href="#home">Home</a>
@@ -11,12 +20,27 @@
         <a href="Contact.html">Contact</a>
         <a href="About.html">About</a>
     </div>
-    <link href="Home.css" rel="stylesheet" type="text/css"/>
+    <nav>
+        <link href="Home.css" rel="stylesheet" type="text/css"/>
 
-    <body>
-        <p class = "Covidmap", style="color:white">A map of covid cases</p>
+    </nav>
 
 
-        <!--frame src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d49257426.20982173!2d127.55138836944137!3d24.75415408730643!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1676010183904!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe-->
-    </body>
+    <body onload="getData()">
+        <h1>COVID-19 Update</h1>
+        <table>
+          <tr>
+            <td>Confirmed:</td>
+            <td id="confirmed"></td>
+          </tr>
+          <tr>
+            <td>Deaths:</td>
+            <td id="deaths"></td>
+          </tr>
+          <tr>
+            <td>Recovered:</td>
+            <td id="recovered"></td>
+          </tr>
+        </table>
+    </body>    
 </html> 

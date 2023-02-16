@@ -1,5 +1,6 @@
 html{
-  background-color: black;
+  background-color: white;
+  color: black;
 }
 
 /* Add a background color to the top navigation */
@@ -26,8 +27,8 @@ html{
   
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: white;
-  color: #333;
+  background-color: black;
+  color: white;
 }
 
 p.Covidmap{
@@ -36,5 +37,8 @@ p.Covidmap{
   border-color: black;
   background-color: black;
   text-align: center;
-
+  font-size: 30px;
+  font-family: 'Cormorant Garamond', serif;
 }
+
+
