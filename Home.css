@@ -41,4 +41,53 @@ p.Covidmap{
   font-family: 'Cormorant Garamond', serif;
 }
 
+body{
+  background-color: white;
+}
 
+h1{
+  text-align: center;
+  font-size: 16px;
+}
+
+p{
+  font-size: 12px;
+}
+
+.hide{
+  background-color: bisque;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.Na-text{
+  top: 20%;
+  left: 16%;
+}
+
+.Eur-text{
+  top: 19%;
+  left: 46%;
+}
+
+.Asia-text{
+  top: 24%;
+  left: 63%;
+}
+
+.SA-text{
+  top: 46%;
+  left: 26%;
+}
+
+.Afr-text{
+  top: 38%;
+  left: 47%;
+}
+
+.Aus-text{
+  top: 50%;
+  left: 75%;
+}
