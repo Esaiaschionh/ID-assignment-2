@@ -12,36 +12,36 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What is 2+2?',
-        choice1:'2',
-        choice2:'4',
-        choice3:'21',
-        choice4:'17',
+        question: "What is 2+2?",
+        choice1:"2",
+        choice2:"4",
+        choice3:"21",
+        choice4:"17",
         answer: 2,
     },
     {
-        question: 'What is 4+4?',
-        choice1:'2',
-        choice2:'8',
-        choice3:'21',
-        choice4:'17',
+        question: "What is 4+4?",
+        choice1:"2",
+        choice2:"8",
+        choice3:"21",
+        choice4:"17",
         answer: 2,
     },
     {
-        question: 'What is 2*2?',
-        choice1:'2',
-        choice2:'4',
-        choice3:'21',
-        choice4:'17',
-        answer: 2,
+        question: "What is 2*2?",
+        choice1:"2",
+        choice2:"21",
+        choice3:"4",
+        choice4:"17",
+        answer: 3,
     },
     {
-        question: 'What is 1+2?',
-        choice1:'2',
-        choice2:'3',
-        choice3:'21',
-        choice4:'17',
-        answer: 2,
+        question: "What is 1+2?",
+        choice1:"2",
+        choice2:"5",
+        choice3:"3",
+        choice4:"17",
+        answer: 3,
     },
 ]
  
@@ -59,7 +59,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html')
+        return window.location.assign ('/ID-assignment-2/end.html')
     }
 
     questionCounter++
@@ -86,10 +86,9 @@ choices.forEach(choice => {
 
         acceptingAnswers = false
         const selectedChoice = e.target
-        const SelectedAnswer = selectedChoice.dataset['number']
+        const selectedAnswer = selectedChoice.dataset['number']
         
-        let classToApply = SelectedAnswer == currentQuestion.answer ? 'correct' : 
-        'incorrect'
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
@@ -100,6 +99,7 @@ choices.forEach(choice => {
         setTimeout(() =>{
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
+
         }, 1000)
     })
 })
